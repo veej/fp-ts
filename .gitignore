@@ -1,7 +1,7 @@
 *.log
 node_modules
 lib
-es6
+# es6
 dev
 .idea
 coverage

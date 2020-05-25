@@ -1,3 +1,14 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 /**
  * `Task<A>` represents an asynchronous computation that yields a value of type `A` and **never fails**.
  * If you want to represent an asynchronous computation that may fail, please see `TaskEither`.
@@ -159,12 +170,8 @@ export var task = {
  *
  * @since 2.0.0
  */
-export var taskSeq = {
-    URI: URI,
-    map: map_,
-    of: of,
-    ap: function (mab, ma) { return function () { return mab().then(function (f) { return ma().then(function (a) { return f(a); }); }); }; },
-    chain: chain_,
-    fromIO: fromIO,
-    fromTask: identity
-};
+export var taskSeq = 
+/*#__PURE__*/
+(function () {
+    return __assign(__assign({}, task), { ap: function (mab, ma) { return function () { return mab().then(function (f) { return ma().then(function (a) { return f(a); }); }); }; } });
+})();

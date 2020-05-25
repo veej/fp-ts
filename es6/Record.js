@@ -205,7 +205,7 @@ export var separate = RR.separate;
  * @since 2.0.0
  */
 export var record = 
-/*@__PURE__*/
+/*#__PURE__*/
 (function () {
     return __assign(__assign({}, RR.readonlyRecord), { URI: URI });
 })();

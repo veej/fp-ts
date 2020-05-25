@@ -335,4 +335,8 @@ export var taskEither = {
  *
  * @since 2.0.0
  */
-export var taskEitherSeq = __assign(__assign({}, taskEither), { ap: function (mab, ma) { return T.chain(mab, function (f) { return T.map(ma, f); }); } });
+export var taskEitherSeq = 
+/*#__PURE__*/
+(function () {
+    return __assign(__assign({}, taskEither), { ap: function (mab, ma) { return T.chain(mab, function (f) { return T.map(ma, f); }); } });
+})();

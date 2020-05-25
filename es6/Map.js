@@ -181,7 +181,7 @@ export var getWitherable = RM.getWitherable;
  * @since 2.0.0
  */
 export var map_ = 
-/*@__PURE__*/
+/*#__PURE__*/
 (function () {
     return __assign(__assign({}, RM.readonlyMap), { URI: URI });
 })();

@@ -837,7 +837,7 @@ export var reduceRightWithIndex = RA.reduceRightWithIndex;
  * @since 2.0.0
  */
 export var array = 
-/*@__PURE__*/
+/*#__PURE__*/
 (function () {
     return __assign(__assign({}, RA.readonlyArray), { URI: URI });
 })();

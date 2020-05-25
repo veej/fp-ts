@@ -174,4 +174,8 @@ export var readerTask = {
  * Like `readerTask` but `ap` is sequential
  * @since 2.3.0
  */
-export var readerTaskSeq = __assign(__assign({}, readerTask), { ap: function (mab, ma) { return T.chain(mab, function (f) { return T.map(ma, f); }); } });
+export var readerTaskSeq = 
+/*#__PURE__*/
+(function () {
+    return __assign(__assign({}, readerTask), { ap: function (mab, ma) { return T.chain(mab, function (f) { return T.map(ma, f); }); } });
+})();

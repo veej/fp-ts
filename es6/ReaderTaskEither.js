@@ -351,7 +351,11 @@ export var readerTaskEither = {
  * Like `readerTaskEither` but `ap` is sequential
  * @since 2.0.0
  */
-export var readerTaskEitherSeq = __assign(__assign({}, readerTaskEither), { ap: function (mab, ma) { return T.chain(mab, function (f) { return T.map(ma, f); }); } });
+export var readerTaskEitherSeq = 
+/*#__PURE__*/
+(function () {
+    return __assign(__assign({}, readerTaskEither), { ap: function (mab, ma) { return T.chain(mab, function (f) { return T.map(ma, f); }); } });
+})();
 /**
  * @since 2.6.0
  */

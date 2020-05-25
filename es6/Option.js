@@ -673,6 +673,15 @@ export var fromEither = function (ma) { return (ma._tag === 'Left' ? none : some
 // instances
 // -------------------------------------------------------------------------------------
 /**
+ * @internal
+ */
+export var applicativeOption = {
+    URI: URI,
+    map: map_,
+    of: some,
+    ap: ap_
+};
+/**
  * @since 2.0.0
  */
 export var option = {

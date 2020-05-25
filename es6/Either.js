@@ -589,6 +589,23 @@ export var filterOrElse = function (predicate, onFalse) { return function (ma) {
 // instances
 // -------------------------------------------------------------------------------------
 /**
+ * @internal
+ */
+export var applicativeEither = {
+    URI: URI,
+    map: map_,
+    of: right,
+    ap: ap_
+};
+/**
+ * @internal
+ */
+export var bifunctorEither = {
+    URI: URI,
+    bimap: bimap_,
+    mapLeft: mapLeft_
+};
+/**
  * @since 2.0.0
  */
 export var either = {

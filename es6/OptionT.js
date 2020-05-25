@@ -13,9 +13,9 @@ var __assign = (this && this.__assign) || function () {
  * @since 2.0.0
  */
 import { getApplicativeComposition } from './Applicative';
-import { fold, none, option, some } from './Option';
+import { fold, none, applicativeOption, some } from './Option';
 export function getOptionM(M) {
-    var A = getApplicativeComposition(M, option);
+    var A = getApplicativeComposition(M, applicativeOption);
     var fnone = M.of(none);
     return __assign(__assign({}, A), { chain: function (ma, f) {
             return M.chain(ma, fold(function () { return fnone; }, f));

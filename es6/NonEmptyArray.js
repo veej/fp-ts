@@ -265,4 +265,8 @@ export var reduceRightWithIndex = RNEA.reduceRightWithIndex;
 /**
  * @since 2.0.0
  */
-export var nonEmptyArray = __assign(__assign({}, RNEA.readonlyNonEmptyArray), { URI: URI });
+export var nonEmptyArray = 
+/*@__PURE__*/
+(function () {
+    return __assign(__assign({}, RNEA.readonlyNonEmptyArray), { URI: URI });
+})();

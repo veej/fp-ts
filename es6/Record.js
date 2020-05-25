@@ -204,4 +204,8 @@ export var separate = RR.separate;
 /**
  * @since 2.0.0
  */
-export var record = __assign(__assign({}, RR.readonlyRecord), { URI: URI });
+export var record = 
+/*@__PURE__*/
+(function () {
+    return __assign(__assign({}, RR.readonlyRecord), { URI: URI });
+})();

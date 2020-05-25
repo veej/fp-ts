@@ -95,4 +95,8 @@ export var reduceRight = RT.reduceRight;
 /**
  * @since 2.0.0
  */
-export var tuple = __assign(__assign({}, RT.readonlyTuple), { URI: URI });
+export var tuple = 
+/*@__PURE__*/
+(function () {
+    return __assign(__assign({}, RT.readonlyTuple), { URI: URI });
+})();

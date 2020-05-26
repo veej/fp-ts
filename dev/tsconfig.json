@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "noImplicitReturns": true,
+    "lib": ["es6", "dom"]
+  },
+  "include": ["./**/*"]
+}
